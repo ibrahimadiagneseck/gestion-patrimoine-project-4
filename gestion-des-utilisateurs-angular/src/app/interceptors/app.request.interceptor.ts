@@ -37,7 +37,7 @@ export class XhrInterceptor implements HttpInterceptor {
           if (err.status !== 401) {
             return;
           }
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['accueil']);
         }
       }));
   }

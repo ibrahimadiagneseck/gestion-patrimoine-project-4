@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         window.sessionStorage.setItem("userdetails",JSON.stringify(this.model));
         let xsrf = getCookie('XSRF-TOKEN')!;
         window.sessionStorage.setItem("XSRF-TOKEN",xsrf);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['accueil']);
       });
 
   }
