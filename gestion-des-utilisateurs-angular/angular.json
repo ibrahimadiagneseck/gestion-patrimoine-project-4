@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bank-app-ui": {
+    "gestion-des-utilisateurs": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bank-app-ui",
+            "outputPath": "dist/gestion-des-utilisateurs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,12 +63,16 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "gestion-des-utilisateurs:build",
+            "port": 4201
+          },
           "configurations": {
             "production": {
-              "browserTarget": "bank-app-ui:build:production"
+              "browserTarget": "gestion-des-utilisateurs:build:production"
             },
             "development": {
-              "browserTarget": "bank-app-ui:build:development"
+              "browserTarget": "gestion-des-utilisateurs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bank-app-ui:build"
+            "browserTarget": "gestion-des-utilisateurs:build"
           }
         },
         "test": {

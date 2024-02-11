@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/user.model';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-accueil',
+  templateUrl: './accueil.component.html',
+  styleUrls: ['./accueil.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class AccueilComponent implements OnInit {
 
   user = new User();
 
