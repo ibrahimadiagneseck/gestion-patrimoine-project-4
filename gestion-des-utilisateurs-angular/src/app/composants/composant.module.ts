@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './loader/loader.component';
 import { EnteteComponent } from './entete/entete.component';
 import { MenuComponent } from './menu/menu.component';
 import { PopupConfirmationSupprimerComponent } from './supprimer/popup-confirmation-supprimer/popup-confirmation-supprimer.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
-
 
 
 @NgModule({
@@ -18,13 +27,12 @@ import { AppRoutingModule } from '../app-routing.module';
     MenuComponent,
     PopupConfirmationSupprimerComponent,
 
-
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgModule, // dropdown
+    NgbModule, // dropdown
 
     MatExpansionModule,
     MatSlideToggleModule,
@@ -42,6 +50,7 @@ import { AppRoutingModule } from '../app-routing.module';
     EnteteComponent,
     MenuComponent,
     PopupConfirmationSupprimerComponent,
+
   ]
 })
 export class ComposantModule { }

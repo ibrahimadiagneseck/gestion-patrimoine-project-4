@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 export const MY_DATE_FORMATS = {
   parse: {
     dateInput: 'YYYY-MM-DD',
@@ -43,6 +44,8 @@ export const MY_DATE_FORMATS = {
     ReactiveFormsModule, // pour formGroup
     BrowserAnimationsModule,
     HttpClientModule, // pour le backend
+
+    NgToastModule,
 
     ComposantModule, // composant
 

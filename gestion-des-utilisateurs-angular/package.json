@@ -1,5 +1,5 @@
 {
-  "name": "gestion-des-utilisateurs",
+  "name": "gestion-patrimoine",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -27,8 +27,6 @@
     "crypto-js": "^4.2.0",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.7.1",
-    "keycloak-angular": "^15.0.0",
-    "keycloak-js": "^22.0.5",
     "ng-angular-popup": "^0.5.2",
     "rxjs": "~7.8.0",
     "ts-evaluator": "^1.2.0",

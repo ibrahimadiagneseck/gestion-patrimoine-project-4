@@ -3,11 +3,8 @@ import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { NotificationType } from 'src/app/enum/notification-type.enum';
-import { CustomHttpRespone } from 'src/app/model/custom-http-response.model';
 import { NotificationService } from 'src/app/services/notification.service';
-import { PrestatairesService } from 'src/app/services/prestataires.service';
 // import { UtilisateurService } from 'src/app/services/utilisateur.service';
-import { VehiculeService } from 'src/app/services/vehicule.service';
 
 @Component({
   selector: 'app-popup-confirmation-supprimer',
@@ -20,8 +17,6 @@ export class PopupConfirmationSupprimerComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
 
   constructor(
-    private prestatairesService: PrestatairesService,
-    private vehiculeService: VehiculeService,
     public dialogRef: MatDialogRef<PopupConfirmationSupprimerComponent>,
     @Inject(MAT_DIALOG_DATA) public informations: any,
     private notificationService: NotificationService
@@ -39,39 +34,39 @@ export class PopupConfirmationSupprimerComponent implements OnInit, OnDestroy {
 
   supprimeronfirmer(id: string, categorie: string): void {
 
-    switch (categorie) {
-      case "prestataire":
-        this.subscriptions.push(
-          this.prestatairesService.supprimerPrestatairesById(id).subscribe({
-            next: (response: CustomHttpRespone) => {
-              this.popupFermer();
-              this.sendNotification(NotificationType.SUCCESS, response.message);
-            },
-            error: (erreurs: HttpErrorResponse) => {
-              console.log(erreurs);
-            }
-          })
-        );
-        break;
+    // switch (categorie) {
+    //   case "prestataire":
+    //     this.subscriptions.push(
+    //       this.prestatairesService.supprimerPrestatairesById(id).subscribe({
+    //         next: (response: CustomHttpRespone) => {
+    //           this.popupFermer();
+    //           this.sendNotification(NotificationType.SUCCESS, response.message);
+    //         },
+    //         error: (erreurs: HttpErrorResponse) => {
+    //           console.log(erreurs);
+    //         }
+    //       })
+    //     );
+    //     break;
     
-      case "vehicule":
-        this.subscriptions.push(
-          this.vehiculeService.supprimerVehiculeById(id).subscribe({
-            next: (response: CustomHttpRespone) => {
-              this.popupFermer();
-              this.sendNotification(NotificationType.SUCCESS, response.message);
-            },
-            error: (erreurs: HttpErrorResponse) => {
-              console.log(erreurs);
-            }
-          })
-        );
-        break;
+    //   case "vehicule":
+    //     this.subscriptions.push(
+    //       this.vehiculeService.supprimerVehiculeById(id).subscribe({
+    //         next: (response: CustomHttpRespone) => {
+    //           this.popupFermer();
+    //           this.sendNotification(NotificationType.SUCCESS, response.message);
+    //         },
+    //         error: (erreurs: HttpErrorResponse) => {
+    //           console.log(erreurs);
+    //         }
+    //       })
+    //     );
+    //     break;
     
-      default:
+    //   default:
       
-        break;
-    }
+    //     break;
+    // }
     
     
   }
