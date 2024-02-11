@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from "src/app/model/user.model";
 import { NgForm } from '@angular/forms';
-import { LoginService } from 'src/app/services/login/login.service';
 import { Router } from '@angular/router';
 import { getCookie } from 'typescript-cookie';
-
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-connexion',
+  template: './connexion.component.html',
+  styleUrls: ['./connexion.component.css']
 })
-export class LoginComponent implements OnInit {
+export class ConnexionComponent implements OnInit {
   authStatus: string = "";
   model = new User();
 

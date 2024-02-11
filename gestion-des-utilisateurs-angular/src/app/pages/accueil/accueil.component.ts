@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/user.model';
 
+
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
