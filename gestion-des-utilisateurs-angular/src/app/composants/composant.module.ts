@@ -24,7 +24,7 @@ import { AppRoutingModule } from '../app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgbModule, // dropdown
+    NgModule, // dropdown
 
     MatExpansionModule,
     MatSlideToggleModule,
