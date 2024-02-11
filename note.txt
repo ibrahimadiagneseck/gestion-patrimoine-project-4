@@ -1,0 +1,23 @@
+http://localhost:8081/register
+
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "mobileNumber": "4564747484",
+    "pwd": "12345",
+    "role": "user"
+}
+
+----------------------------------------------------------------------------------------
+
+http://localhost:8081/user
+
+Authorization : basic auth
+john@example.com
+12345
+
+
+----------------------------------------------------------------------------------------
+
+
+
